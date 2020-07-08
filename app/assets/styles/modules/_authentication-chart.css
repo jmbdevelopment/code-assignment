@@ -1,0 +1,40 @@
+.authentication-chart {
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    //align-items: center;
+    //width: 25em;
+    //height: 18em;
+}
+
+.chart-container--main {
+    width: 20em;
+    height: 14em;
+    margin: 0;
+    float:left;
+
+    @mixin smallScreen {
+        width: 28em;
+        height: 19em;
+    }
+
+    &__description {
+        margin-top: 2em;
+        margin-right: 2em;
+        width: 21em;
+        height: 7em;
+        font-size: 0.82em;
+        font-weight: 300;
+        justify-content: center;
+        float: left;
+        background-color: $hoyBlue;
+        border-radius: 4px;
+        padding: 10px;
+        color: white;
+    }
+
+    &--total-amount {
+        font-size: 3em;
+        padding-top: 0.5em;
+    }
+}

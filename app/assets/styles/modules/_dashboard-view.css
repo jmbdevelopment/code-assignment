@@ -1,0 +1,19 @@
+.dashboard-view {
+    flex-grow: 1;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2em;
+    
+
+    &__heading {
+        font-weight: 700;
+        font-size: 1.7em;
+        padding-bottom: 1em;
+
+        @mixin smallScreen {
+            font-weight: 700;
+            font-size: 2.3em;
+        }
+    }
+}

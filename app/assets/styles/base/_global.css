@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Open Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1016px;
+    margin: 0 auto;
+}

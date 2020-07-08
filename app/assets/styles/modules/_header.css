@@ -1,0 +1,25 @@
+.header {
+    //padding: 1em 0;
+    height: 5em;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+
+    &__logo {
+        /*color: #000;
+        margin-left: 1em;
+        font-family: 'Open Sans', cursive, sans-serif;
+        cursor: pointer;
+        font-size: 1.1em;
+        display: flex;
+        align-items: center;*/
+        display: block;
+        height: 36px;
+        width: 140px;
+        background: transparent url('../../assets/images/infowijs.svg') no-repeat 0;
+        background-size: contain;
+        text-indent: -1000px;
+        overflow: hidden;
+        margin-left: 1.5em;
+    }
+}
