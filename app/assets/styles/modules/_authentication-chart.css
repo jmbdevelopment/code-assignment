@@ -1,10 +1,6 @@
 .authentication-chart {
     display: flex;
     flex-direction: column;
-    //justify-content: center;
-    //align-items: center;
-    //width: 25em;
-    //height: 18em;
 }
 
 .chart-container--main {

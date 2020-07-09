@@ -14,12 +14,3 @@ const DashboardView = () => {
 }
 
 export default DashboardView
-
-/*
-<div className="dashboard-view">
-    <div className="dashboard-view__item--wide"></div>
-    <div className="dashboard-view__item"></div>
-    <div className="dashboard-view__item"></div>
-    <div className="dashboard-view__item--wide"></div>
-</div>
-*/

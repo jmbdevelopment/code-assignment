@@ -4,11 +4,6 @@ import { MONTHS_ARRAY, STUDENT_STRING, PARENT_STRING, TEACHER_STRING, TOTAL_STRI
 
 import { VictoryChart, VictoryAxis, VictoryArea } from 'victory'
 
-// Commented out because the dropdown filter didn't work due to the arrow functions not registering
-//import Dropdown from 'rc-dropdown';
-//import Menu, { Item as MenuItem, Divider } from 'rc-menu';
-//import 'rc-dropdown/assets/index.css';
-
 // Arrays containing unique id's matching corresponding users
 let studentIdArray = []
 let parentIdArray = []
@@ -78,9 +73,6 @@ class AuthenticationChart extends React.Component {
                 // Set initial state of chart with total logins
                 this.setState( { currentUserLoginData: totalChartData } )
             })
-
-            
-
         } catch(e) {
             console.log(e)
         }
@@ -225,61 +217,3 @@ const DisplayChart = (props) => {
 }
 
 export default AuthenticationChart
-
-
-
-
-
-/* Dropdown filter code that was commented out because of a arrow function issue */
-
-/*
-function onSelect({ key }) {
-    //console.log(`${key} selected`);
-    switch (key) {
-                case TOTAL_STRING:
-                    () => this.setState({ currentUserLoginData: studentChartData })
-                    break;
-
-                case STUDENT_STRING:
-                    () => this.setState({ currentUserLoginData: studentChartData })
-                    break;
-    
-                case PARENT_STRING:
-                    () => this.setState({ currentUserLoginData: parentChartData })
-                    break;
-    
-                case TEACHER_STRING:
-                    () => this.setState({ currentUserLoginData: teacherChartData })
-                    break;
-            
-                default:
-                    console.log('invalid key.')
-                    break;
-}
-
-const menu = (
-    <Menu onSelect={onSelect}>
-        <MenuItem key={TOTAL_STRING}>{TOTAL_STRING}</MenuItem>
-        <Divider />
-        <MenuItem key={STUDENT_STRING}>{STUDENT_STRING}</MenuItem>
-        <Divider />
-        <MenuItem key={PARENT_STRING}>{PARENT_STRING}</MenuItem>
-        <Divider />
-        <MenuItem key={TEACHER_STRING}>{TEACHER_STRING}</MenuItem>
-    </Menu>
-)
-
-
-I had this dropdown included to filter between users and re-render the main chart, there was an issue with arrow
-functions not working so I disabled the dropdown for now.
-
-<Dropdown
-    trigger={['click']}
-    overlay={menu}
-    animation="slide-up"
->
-    <button style={{ width: 100 }}>filter</button>
-</Dropdown>
-
-
-*/
