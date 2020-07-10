@@ -21,9 +21,6 @@ let chartDataCollection = [
     {name: TEACHER_STRING, data: teacherChartData}
 ]
 
-
-
-
 class AuthenticationChart extends React.Component {
     state = {
         currentUserLoginData: [],
@@ -47,13 +44,13 @@ class AuthenticationChart extends React.Component {
                 }
 
                 let authArray2020 = []
-                authArray2020 = formattedAuthArray.filter(item => {return new Date(item[0]).getFullYear() == YEAR_2020})
+                authArray2020 = formattedAuthArray.filter(item => {return String(new Date(item[0]).getFullYear()) === YEAR_2020})
 
                 for(let n=0; n<authArray2020.length; n++) {
                     let newDate  = new Date(authArray2020[n][0])
 
                     for(let m=0; m<=chartDataMonthCount; m++) {  
-                        if(newDate.getMonth() == m){
+                        if(newDate.getMonth() === m){
                             totalMonthCount[m] === undefined ? totalMonthCount[m] = 1 : totalMonthCount[m] += 1
                         }
                     }
@@ -84,7 +81,7 @@ class AuthenticationChart extends React.Component {
             let currentId = authArray[i][1]
             
             for(let m=0; m<=chartDataMonthCount; m++) {  
-                if(newDate.getMonth() == m){
+                if(newDate.getMonth() === m){
                     if(studentIdArray.includes(currentId)){
                         studentMonthCount[m] === undefined ? studentMonthCount[m] = 1 : studentMonthCount[m] += 1
                     }
